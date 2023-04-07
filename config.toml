@@ -1,0 +1,48 @@
+baseURL = 'https://cczywyc.love'
+languageCode = 'zh-cn'
+title = 'cczywyc blog'
+theme = 'puppet'
+
+paginate = 5
+
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = -100
+[[menu.main]]
+identifier = "archive"
+name = "归档"
+url = "/archive/"
+weight = 10
+[[menu.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 50
+[[menu.main]]
+identifier = "book"
+name = "读书"
+url = "/book/"
+weight = 70
+[[menu.main]]
+identifier = "github"
+name = "Github"
+url = "https://github.com/cczywyc"
+weight = 100
+
+[params]
+author = "cczywyc"
+description = "一个爱折腾的人"
+keywords = "blog,developer,personal"
+img_home = "img/home-bg.jpg"
+img_404 = "img/404-bg.jpg"
+
+[params.social]
+twitter = "cczywyc"
+zhihu = "cczywyc"
+weibo = "6026902801"
+github = "cczywyc"
+email = 'cczywyc@qq.com'
+rss = true
