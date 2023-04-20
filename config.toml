@@ -1,9 +1,30 @@
 baseURL = 'https://cczywyc.love'
 languageCode = 'zh-cn'
+defaultContentLanguage = "zh-cn"
 title = 'cczywyc blog'
 theme = 'puppet'
 
 paginate = 5
+
+hasCJKLanguage = true
+enableInlineShortcodes = true
+enableEmoji = true
+ignoreErrors = ["error-remote-getjson"]
+
+disqusShortname = ""
+googleAnalytics = ""
+
+[markup]
+[markup.highlight]
+noClasses = true
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = false
+style = "dracula"
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [menu]
 [[menu.main]]
@@ -39,6 +60,12 @@ keywords = "blog,developer,personal"
 img_home = "img/home-bg.jpg"
 img_404 = "img/404-bg.jpg"
 
+[params.sidebar]
+enable = true
+gravatarEmail = ""
+avatar = "img/home-bg.jpg"
+bio = "cczywyc personal website"
+
 [params.social]
 twitter = "cczywyc"
 zhihu = "cczywyc"
@@ -46,3 +73,13 @@ weibo = "6026902801"
 github = "cczywyc"
 email = 'cczywyc@qq.com'
 rss = true
+
+[params.giscus]
+enable = true
+repo = "roninro/hugo-theme-puppet"
+repo_id = "R_kgDOHuvyhw"
+category = "General"
+category_id = "DIC_kwDOHuvyh84CQjDo"
+input_position = "top"
+theme = "light_tritanopia"
+lang = "zh-CN"
