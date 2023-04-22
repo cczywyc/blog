@@ -55,13 +55,13 @@ weight = 100
 author = "cczywyc"
 description = "一个爱折腾的人"
 keywords = "blog,developer,personal"
-img_home = "img/home-bg.jpg"
+img_home = "img/home_1.jpeg"
 img_404 = "img/404-bg.jpg"
 
 [params.sidebar]
 enable = true
 gravatarEmail = ""
-avatar = "img/home-bg.jpg"
+avatar = "img/bio.jpeg"
 bio = "cczywyc personal website"
 
 [params.social]
