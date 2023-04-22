@@ -76,10 +76,13 @@ rss = true
 
 [params.giscus]
 enable = true
-repo = "roninro/hugo-theme-puppet"
-repo_id = "R_kgDOHuvyhw"
-category = "General"
-category_id = "DIC_kwDOHuvyh84CQjDo"
+repo = "cczywyc/blog"
+repo_id = "R_kgDOJT0jQQ"
+category = "Announcements"
+category_id = "DIC_kwDOJT0jQc4CV9qk"
 input_position = "top"
-theme = "light_tritanopia"
+reactions_enabled = "1"
+emit_metadata = "0"
+mapping = "pathname"
+theme = "light"
 lang = "zh-CN"
