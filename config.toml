@@ -46,11 +46,6 @@ name = "关于"
 url = "/about/"
 weight = 50
 [[menu.main]]
-identifier = "book"
-name = "读书"
-url = "/book/"
-weight = 70
-[[menu.main]]
 identifier = "github"
 name = "Github"
 url = "https://github.com/cczywyc"
