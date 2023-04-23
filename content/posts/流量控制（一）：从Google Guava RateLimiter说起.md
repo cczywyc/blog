@@ -57,4 +57,32 @@ tags: ["流量控制", "Java"]
 
 ![](http://blogimg.cczywyc.love/LeakyBucket_veriable-length_packet.png)
 
-代码实现上述过程：
+代码大致逻辑如下：
+
+```java
+/**
+ * leaky bucket, variable-length packets
+ * @author cczyWyc
+ */
+public class VariableLenPacketDemo {
+    public static void main(String[] args) {
+        int storage = 0; // stored packet in bucket
+        int bucketSize = 10; // the capacity of the bucket
+        int inputPktSize = 4; // inputs packet into the bucket at a time
+        int outPktSize = 1; // outputs packet from the bucket at a time
+        int numberQueries = 4; // total number of times bucket content is checked
+        for (int i = 0; i < numberQueries; i++) {
+            int leftSize = bucketSize - storage;
+            if (inputPktSize <= leftSize) {
+                // add packet into the bucket
+                storage += inputPktSize;
+            } else {
+                System.out.println("packet loss = " + inputPktSize);
+            }
+            System.out.println("buff size = " + storage + " out of bucket size = " + bucketSize);
+            storage -= outPktSize;
+        }
+    }
+}
+```
+
