@@ -1,0 +1,67 @@
+name: Upload to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-about:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.head_commit.modified, 'content/about/') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          source: ${{ github.event.head_commit.modified }}
+          target: /home/ec2-user/cczywycBlog/content/about/
+
+  upload-archive:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.head_commit.modified, 'content/archive/') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          source: ${{ github.event.head_commit.modified }}
+          target: /home/ec2-user/cczywycBlog/content/archive/
+
+  upload-posts:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.head_commit.modified, 'content/posts/') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          source: ${{ github.event.head_commit.modified }}
+          target: /home/ec2-user/cczywycBlog/content/posts/
+
+  upload-img:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.head_commit.modified, 'static/img/') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          source: ${{ github.event.head_commit.modified }}
+          target: /home/ec2-user/cczywycBlog/static/img/
