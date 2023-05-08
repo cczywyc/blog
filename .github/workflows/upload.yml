@@ -4,16 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'content/about/**'
-      - 'content/archive/**'
-      - 'content/posts/**'
-      - 'static/img/**'
 
 jobs:
   upload-about:
     runs-on: ubuntu-latest
-    if: ${{ contains(toJSON(github.event.head_commit.modified), 'content/about/') }}
+    if: ${{ contains(github.event.head_commit.modified, 'content/about/') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -28,7 +23,7 @@ jobs:
 
   upload-archive:
     runs-on: ubuntu-latest
-    if: ${{ contains(toJSON(github.event.head_commit.modified), 'content/archive/') }}
+    if: ${{ contains(github.event.head_commit.modified, 'content/archive/') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -43,7 +38,7 @@ jobs:
 
   upload-posts:
     runs-on: ubuntu-latest
-    if: ${{ contains(toJSON(github.event.head_commit.modified), 'content/posts/') }}
+    if: ${{ contains(github.event.head_commit.modified, 'content/posts/') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -58,7 +53,7 @@ jobs:
 
   upload-img:
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.event.head_commit.modified, 'static/img/') }}
+    if: ${{ contains(github.event.head_commit.modified, 'static/img/') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
