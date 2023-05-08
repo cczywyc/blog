@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'content/about/**'
+      - 'content/archive/**'
+      - 'content/posts/**'
+      - 'static/img/**'
 
 jobs:
   upload-about:
