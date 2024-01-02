@@ -1,4 +1,4 @@
 # blog
-This repository is my personal [blog](https://blog.cczywyc.com) file
+This repository is my [website](https://cczywyc.com) file
 
-my blog powered by [Hugo](https://gohugo.io/), use the theme is [puppet](https://github.com/roninro/hugo-theme-puppet)
+my blog powered by [Hexo](https://hexo.io/), use the theme is [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
