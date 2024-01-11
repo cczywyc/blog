@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: # image
+  logo: /static/img/avatar.png
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -766,6 +766,7 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
+   - curd boy，Gopher
    - 世界上只有一种英雄主义，那就是在看清了生活的真相后依然热爱它
    - 寄蜉蝣于天地，渺沧海之一粟
    - 哀吾生之须臾，羡长江之无穷
