@@ -15,7 +15,7 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
  项目: /project/ || fas fa-diagram-project
- 读书: /book/ || fas fa-book
+ 书单: /book/ || fas fa-book
  关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
@@ -328,7 +328,7 @@ darkmode:
   end: # 22
 
 # show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
