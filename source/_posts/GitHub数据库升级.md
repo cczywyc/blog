@@ -6,7 +6,7 @@ tags:
   - 优质外文翻译
 categories:
   - 外文优质文章合集
-cover: https://blogimg.cczywyc.love/post-cover/reactor.jpeg
+cover: https://blogimg.cczywyc.love/post-cover/github_upgrade_mysql.jpeg
 ---
 
 最近 GitHub 官方博客更新了一篇文章，讲述了将 GitHub 网站依赖的 1200+ 台 MySQL 主机升级到 8.0 版本的过程。
