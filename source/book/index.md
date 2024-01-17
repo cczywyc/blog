@@ -40,7 +40,7 @@ top_img: /static/img/book.jpg
 | --------------------------------------------------------- | --------------------- | -------------- |
 | [左耳听风](https://book.douban.com/subject/36667269/)     | 陈皓（左耳朵耗子）    | 程序员综合书籍 |
 | [活着](https://book.douban.com/subject/4913064/)          | 余华                  | 经典小说       |
-| [松弛感]()                                                | 郝培强（Tinyfool）    | 程序员杂记     |
+| [松弛感](https://book.douban.com/subject/36336680/)       | 郝培强（Tinyfool）    | 程序员杂记     |
 | [思考，快与慢](https://book.douban.com/subject/10785583/) | 丹尼尔·卡尼曼         | 心理学         |
 | [黑天鹅](https://book.douban.com/subject/6854525/)        | Nassim Nicholas Taleb | 经济学         |
 
