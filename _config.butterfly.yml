@@ -36,7 +36,7 @@ social:
  fab fa-x-twitter: https://twitter.com/cczywyc || Twitter || '#0e3d6c'
  fab fa-telegram: https://t.me/cczywyc || Telegram || '#0e3d6c'
  fab fa-zhihu: https://www.zhihu.com/people/cczywyc || 知乎 || '#0e3d6c'
- far fa-envelope: mailto:cczywyc@gmail.com || Email || '#0e3d6c'
+ far fa-envelope: mailto:cczywyc@qq.com || Email || '#0e3d6c'
  fas fa-rss: /atom.xml || RSS || '#0e3d6c'
 
 # Image (圖片設置)
@@ -211,7 +211,7 @@ footer:
   owner:
     enable: true
     since: 2022
-  custom_text: 唯有热爱可抵岁月漫长
+  custom_text: <a href="https://beian.miit.gov.cn/"><span>浙ICP备2024061963号-1</span></a>
   copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)

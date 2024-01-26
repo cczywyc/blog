@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: cczywyc website
+title: cczywyc
 subtitle: '一个爱折腾的人'
 description: '唯有热爱可抵岁月漫长'
 keywords:
 author: cczywyc
 language: zh-CN
 timezone: ''
-email: cczywyc@gmail.com
+email: cczywyc@qq.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
