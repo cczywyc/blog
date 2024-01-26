@@ -7,7 +7,7 @@ tags:
   - JDK 新特性
 categories:
   - Java 技术文章合集
-cover: https://blogimg.cczywyc.love/post-cover/java21-feature.jpeg
+cover: https://img.cczywyc.com/post-cover/java21-feature.jpeg
 ---
 
 # 背景

@@ -7,7 +7,7 @@ tags:
   - 折腾
 categories:
   - 网站环境搭建教程合集
-cover: https://blogimg.cczywyc.love/post-cover/run_ttrss.jpeg
+cover: https://img.cczywyc.com/post-cover/run_ttrss.jpeg
 ---
 
 先来简单说一下什么是 RSS 吧，RSS 全称叫做 Really Simple Syndication，中文叫做简易信息聚合，也叫聚合内容，它是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用 RSS 后，网站订阅者便无需手动查看网站是否有新的内容，同时 RSS 可将多个网站更新的内容进行整合，以摘要的形式呈现，有助于订阅者快速获取重要信息，并选择性地点阅查看。说的简单点就是它可以把各种信息源整合起来，我只需要在一个 RSS 服务里面就可以获取到来自各种不同渠道的订阅更新，现在我们看到个很多技术博客和网站都提供了 RSS 订阅链接，细心的话你应该在很多地方就见过这个东西。
@@ -311,6 +311,6 @@ systemctl restart nginx
 
 最后在浏览器访问 https://your_domain 正常情况下就能看到如下页面，默认用户名和密码是 admin/passoword，登陆成功后在偏好设置里面可以更改管理员密码
 
-![](https://blogimg.cczywyc.love/tt-rss.png)
+![](https://img.cczywyc.com/tt-rss.png)
 
 (本文完)

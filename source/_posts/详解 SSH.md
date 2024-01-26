@@ -6,7 +6,7 @@ tags:
   - 网络协议
 categories:
   - 网络协议文章合集
-cover: https://blogimg.cczywyc.love/post-cover/ssh.jpeg
+cover: https://img.cczywyc.com/post-cover/ssh.jpeg
 ---
 
 # 概述
@@ -85,7 +85,7 @@ SSH 协议框架中最主要的部分是三个协议：
 
 如果放在整个网络模型中，大概就是以下这个样子：
 
-![](https://blogimg.cczywyc.love/SSH/ssh-transport-layer-protocol.png)
+![](https://img.cczywyc.com/SSH/ssh-transport-layer-protocol.png)
 
 同时还有为许多高层的网络安全应用协议提供扩展的支持。各种高层应用协议可以相对地独立于 SSH 基本体系之外，并依靠这个基本框架，通过连接协议使用 SSH 的安全机制。
 
@@ -105,7 +105,7 @@ SSH 协议的实现是以 C/S 架构的模式工作的，也就是说 SSH 会话
 
 ### 握手过程
 
-![](https://blogimg.cczywyc.love/SSH/ssh-handshake-steps.png)
+![](https://img.cczywyc.com/SSH/ssh-handshake-steps.png)
 
 1. TCP Connection：一旦 TCP 握手完成建立连接，客户端和服务端之间交换 ID 字符串。
 2. Algorithm Negotiation：算法协商，双方支持的密钥交换算法和压缩算法列表，用于在客户端和服务端之间协商出双方共同支持的算法。
@@ -183,7 +183,7 @@ SSH 隧道在许多使用大型机系统作为应用程序后端的公司环境�
 
 下面以下图中的例子来分析 SSH 协议的报文
 
-![](https://blogimg.cczywyc.love/SSH/ssh_pcap.pic.jpg)
+![](https://img.cczywyc.com/SSH/ssh_pcap.pic.jpg)
 
 ### TCP 三次握手
 

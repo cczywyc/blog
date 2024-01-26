@@ -7,7 +7,7 @@ tags:
   - RSS
 categories:
   - Golang 技术文章合集
-cover: https://blogimg.cczywyc.love/post-cover/go-feed.jpeg
+cover: https://img.cczywyc.com/post-cover/go-feed.jpeg
 ---
 
 上篇文章记录了我在服务器上搭建了自己的 RSS 服务，经过一段时间的体验使用，我发现 RSS 这种信息获取的方式的确很适合我。在深入使用的过程中，也逐渐总结了一些 tt-rss 的优缺点，先说我认为好的方面：
@@ -151,7 +151,7 @@ type Feed struct {
     * Description：文章的概要描述
     * Content：文章的完整内容
 
-    值得一提的是，不同的 RSS 服务提供方，这里面的字段会有稍微差别，比如说，有些网站提供的 RSS 订阅就只有 Description，没有 Content 属性（或者 Content 属性跟 Description 内容一样，并没有显示文章完整内容），所以你会看到在 RSS 阅读器上，有的订阅是可以完整显示内容的，有的只是显示了摘要，需要你点击到原网站才能看到完整的内容。比如 [美团技术团队](https://tech.meituan.com/) 的 [RSS 文件]()，它的 Content 就不完整，你在 tt-rss 里面看到的就是这个样子 ![](https://blogimg.cczywyc.love/tech-meituan.png)
+    值得一提的是，不同的 RSS 服务提供方，这里面的字段会有稍微差别，比如说，有些网站提供的 RSS 订阅就只有 Description，没有 Content 属性（或者 Content 属性跟 Description 内容一样，并没有显示文章完整内容），所以你会看到在 RSS 阅读器上，有的订阅是可以完整显示内容的，有的只是显示了摘要，需要你点击到原网站才能看到完整的内容。比如 [美团技术团队](https://tech.meituan.com/) 的 [RSS 文件]()，它的 Content 就不完整，你在 tt-rss 里面看到的就是这个样子 ![](https://img.cczywyc.com/tech-meituan.png)
 
     关于这一部分不能解析到完整内容的 RSS 文件，我将在后面单独说。
 

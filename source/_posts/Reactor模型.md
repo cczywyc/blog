@@ -7,7 +7,7 @@ tags:
   - 网络编程
 categories:
   - 网络协议文章合集
-cover: https://blogimg.cczywyc.love/post-cover/reactor.jpeg
+cover: https://img.cczywyc.com/post-cover/reactor.jpeg
 ---
 
 # 前言
@@ -22,17 +22,17 @@ cover: https://blogimg.cczywyc.love/post-cover/reactor.jpeg
 
 随着操作系统内核的发展，推动软件技术的进步，结合编程语言的支持，诞生了许多种不同的IO模型，大致概括为一下五类：
 
-![](http://blogimg.cczywyc.love/reactor/1.png)
+![](http://img.cczywyc.com/reactor/1.png)
 
 ## 阻塞式 IO
 
 阻塞式IO也就是一对一建立连接，一个客户端和一个服务端建立连接，在服务端返回数据之前，客户端会阻塞，直到有数据返回，对应的调用过程如下图
 
-![](http://blogimg.cczywyc.love/reactor/2.png)
+![](http://img.cczywyc.com/reactor/2.png)
 
 这种模式的IO连接，操作系统会给每一个连接分配一个线程（进程），在有数据返回之前，调用线程都会阻塞，如果连接数变多，就会频繁创建、销毁线程，给操作系统带来巨大的开销，除此之外，在数据发送过程中，数据要在操作系统内核态和用户态之前切换，又增加了操作系统的开销
 
-![](http://blogimg.cczywyc.love/reactor/3.png)
+![](http://img.cczywyc.com/reactor/3.png)
 
 ## 非阻塞式 IO
 
@@ -40,11 +40,11 @@ cover: https://blogimg.cczywyc.love/post-cover/reactor.jpeg
 
 阻塞式IO在上述的基础上发展了一点儿，在用户态发生一次系统调用后，内核会立即返回，在用户态第一个阶段不是阻塞的，而是会不断的轮询内核数据是否准备好，第二个阶段数据在发生上下文切换的过程中，仍然是阻塞的
 
-![](http://blogimg.cczywyc.love/reactor/4.png)
+![](http://img.cczywyc.com/reactor/4.png)
 
 与此同时，我们可以看到，这种IO模型依然需要频繁的上下文切换，增大系统的开销
 
-![](http://blogimg.cczywyc.love/reactor/5.png)
+![](http://img.cczywyc.com/reactor/5.png)
 
 ## IO 多路复用
 
@@ -52,7 +52,7 @@ cover: https://blogimg.cczywyc.love/post-cover/reactor.jpeg
 
 IO多路复用本质上和非阻塞式IO一样，不同的是它利用了select/poll、epoll这样的操作系统内核支持的特性，来完成更高并发数连接的支持，从模型本质上它仍然是同步非阻塞式IO。
 
-![](http://blogimg.cczywyc.love/reactor/6.png)
+![](http://img.cczywyc.com/reactor/6.png)
 
 ### select/poll
 
@@ -66,7 +66,7 @@ poll 不再用 BitsMap 来存储所关注的文件描述符，取而代之用动
 
 但是 poll 和 select 并没有太大的本质区别，都是使用「线性结构」存储进程关注的 Socket 集合，因此都需要遍历文件描述符集合来找到可读或可写的 Socket，时间复杂度为 O(n)，而且也需要在用户态与内核态之间拷贝文件描述符集合，这种方式随着并发数上来，性能的损耗会呈指数级增长。
 
-![](http://blogimg.cczywyc.love/reactor/7.png)
+![](http://img.cczywyc.com/reactor/7.png)
 
 ### epoll
 
@@ -76,7 +76,7 @@ epoll 通过两个方面，很好解决了 select/poll 的问题。
 
 第二点， epoll 使用事件驱动的机制，内核里维护了一个链表来记录就绪事件，当某个 socket 有事件发生时，通过回调函数内核会将其加入到这个就绪事件列表中，当用户调用 epoll_wait() 函数时，只会返回有事件发生的文件描述符的个数，不需要像 select/poll 那样轮询扫描整个 socket 集合，大大提高了检测的效率。从下图你可以看到 epoll 相关的接口作用：
 
-![](http://blogimg.cczywyc.love/reactor/8.png)
+![](http://img.cczywyc.com/reactor/8.png)
 
 epoll 的方式即使监听的 Socket 数量越多的时候，效率不会大幅度降低，能够同时监听的 Socket 的数目也非常的多了，上限就为系统定义的进程打开的最大文件描述符个数。因而，epoll 被称为解决 C10K 问题的利器。epoll 支持两种事件触发模式，分别是边缘触发（edge-triggered，ET）和水平触发（level-triggered，LT）
 
@@ -87,13 +87,13 @@ select/poll 只有水平触发模式，epoll 默认的触发模式是水平触�
 
 ## 信号驱动 IO
 
-![](http://blogimg.cczywyc.love/reactor/9.png)
+![](http://img.cczywyc.com/reactor/9.png)
 
 ## 异步 IO
 
 前面四种IO模型从同步异步角度来看，都是同步IO，那么有没有真正的异步IO模型呢？答案是有的，这需要操作系统内核的支持
 
-![](http://blogimg.cczywyc.love/reactor/10.png)
+![](http://img.cczywyc.com/reactor/10.png)
 
 ## 总结
 
@@ -115,7 +115,7 @@ select/poll 只有水平触发模式，epoll 默认的触发模式是水平触�
 
 一般来说，C 语言实现的是「单 Reactor 单进程」的方案，因为 C 语编写完的程序，运行后就是一个独立的进程，不需要在进程中再创建线程。而 Java 语言实现的是「单 Reactor 单线程」的方案，因为 Java 程序是跑在 Java 虚拟机这个进程上面的，虚拟机中有很多线程，我们写的 Java 程序只是其中的一个线程而已。以C语言进程为例，下面是它的方案示意图：
 
-![](http://blogimg.cczywyc.love/reactor/11.webp)
+![](http://img.cczywyc.com/reactor/11.webp)
 
 可以看到进程里有Reactor、Acceptor和Handler三个对象：
 
@@ -143,7 +143,7 @@ select/poll 只有水平触发模式，epoll 默认的触发模式是水平触�
 
 如果要克服「单 Reactor 单线程 / 进程」方案的缺点，那么就需要引入多线程 / 多进程，这样就产生了单 Reactor 多线程 / 多进程的方案。下图是它的方案示意图：
 
-![](http://blogimg.cczywyc.love/reactor/12.png)
+![](http://img.cczywyc.com/reactor/12.png)
 
 下面是这个方案的流程：
 
@@ -168,7 +168,7 @@ select/poll 只有水平触发模式，epoll 默认的触发模式是水平触�
 
 直接来看方案示意图：
 
-![](http://blogimg.cczywyc.love/reactor/13.png)
+![](http://img.cczywyc.com/reactor/13.png)
 
 下面是此方案的流程：
 
