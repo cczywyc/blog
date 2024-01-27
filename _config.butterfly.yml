@@ -210,7 +210,7 @@ noticeOutdate:
 footer:
   owner:
     enable: true
-    since: 2022
+    since: 2023
   custom_text: <a href="https://beian.miit.gov.cn/"><span>浙ICP备2024061963号-1</span></a>
   copyright: true # Copyright of theme and framework
 
@@ -683,8 +683,8 @@ canvas_ribbon:
 
 # Fluttering Ribbon (動態彩帶)
 canvas_fluttering_ribbon:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
