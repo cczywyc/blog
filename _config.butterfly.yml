@@ -238,7 +238,7 @@ aside:
       link: https://github.com/cczywyc
   card_announcement:
     enable: true
-    content: 欢迎你来到我的网站，或许我们能成为好朋友。
+    content: 首页封面图是我拍的杭州西湖<br />欢迎来到我的网站
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
