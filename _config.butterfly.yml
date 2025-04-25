@@ -21,12 +21,27 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
-highlight_copy: true # copy button
-highlight_lang: true # show the code language
-highlight_shrink: none # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
-code_word_wrap: false
+# highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+# highlight_copy: true # copy button
+# highlight_lang: true # show the code language
+# highlight_shrink: none # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
+# highlight_height_limit: false # unit: px
+# code_word_wrap: false
+
+code_blocks:
+  # Code block theme: darker / pale night / light / ocean / false
+  theme: 'pale night'
+  macStyle: true
+  # Code block height limit (unit: px)
+  height_limit: false
+  word_wrap: false
+
+  # Toolbar
+  copy: true
+  language: true
+  # true: shrink the code blocks | false: expand the code blocks | none: expand code blocks and hide the button
+  shrink: false
+  fullpage: false
 
 # Social Settings (社交圖標設置)
 # formal:
@@ -36,7 +51,7 @@ social:
  fab fa-x-twitter: https://twitter.com/cczywyc || Twitter || '#0e3d6c'
  fab fa-telegram: https://t.me/cczywyc || Telegram || '#0e3d6c'
  fab fa-zhihu: https://www.zhihu.com/people/cczywyc || 知乎 || '#0e3d6c'
- far fa-envelope: mailto:cczywyc@qq.com || Email || '#0e3d6c'
+ far fa-envelope: mailto:cczywyc@gmail.com || Email || '#0e3d6c'
  fas fa-rss: /atom.xml || RSS || '#0e3d6c'
 
 # Image (圖片設置)
@@ -54,7 +69,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: /static/img/home.jpg
+index_img: false
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: /static/img/home.jpg
@@ -238,7 +253,7 @@ aside:
       link: https://github.com/cczywyc
   card_announcement:
     enable: true
-    content: 首页封面图是我拍的杭州西湖<br />欢迎来到我的网站
+    content: 这是我的个人网站<br />欢迎你来，希望我们能成为朋友
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -323,7 +338,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start: # 8
   end: # 22
@@ -360,6 +375,11 @@ katex:
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
 # --------------------------------------
+search:
+  # Choose: algolia_search / local_search / docsearch
+  # leave it empty if you don't need search
+  use: local_search
+  placeholder: search
 
 # Algolia search
 algolia_search:
@@ -371,7 +391,7 @@ algolia_search:
 local_search:
   enable: true
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
@@ -608,23 +628,23 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
- theme_color:
-   enable: true
-   main: "#0e3d6c"
-   paginator: "#00c4b6"
-   button_hover: "#0e3d6c"
-   text_selection: "#00c4b6"
-   link_color: "#99a9bf"
-   meta_color: "#858585"
-   hr_color: "#A4D8FA"
-   code_foreground: "#F47466"
-   code_background: "rgba(27, 31, 35, .05)"
-   toc_color: "#00c4b6"
-   blockquote_padding_color: "#49b1f5"
-   blockquote_background_color: "#49b1f5"
-   scrollbar_color: "#49b1f5"
-   meta_theme_color_light: "ffffff"
-   meta_theme_color_dark: "#0d0d0d"
+theme_color:
+  enable: true
+  main: '#0e3d6c'
+  paginator: "#c471ed"
+  button_hover: "#00c4b6"
+  text_selection: "#00c4b6"
+  link_color: "#99a9bf"
+  meta_color: "#858585"
+  hr_color: "#A4D8FA"
+  code_foreground: "#F47466"
+  code_background: "rgba(27, 31, 35, .05)"
+  toc_color: "#00c4b6"
+  blockquote_padding_color: '#0e3d6c'
+  blockquote_background_color: '#0e3d6c'
+  scrollbar_color: '#0e3d6c'
+  meta_theme_color_light: "ffffff"
+  meta_theme_color_dark: "#0d0d0d"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -725,8 +745,8 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
-  field: post # site/post
+  enable: true
+  field: site # site/post
   title-prefix-icon: # '\f0c1'
   title-prefix-icon-color: # '#F47466'
 
@@ -752,7 +772,7 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect (打字效果)
   effect: true
   # Customize typed.js (配置typed.js)
