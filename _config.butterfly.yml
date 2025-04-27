@@ -940,6 +940,21 @@ inject:
   bottom:
   # - <script src="xxxx"></script>
 
+swiper:
+  enable: true # 开关
+  priority: 1 #过滤器优先权
+  enable_page: all # 应用页面
+  timemode: date #date/updated
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  default_descr: 再怎么看我也不知道怎么描述它的啦！
+  swiper_css: https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper@1.0.12/lib/swiper.min.css #swiper css依赖
+  swiper_js: https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper@1.0.12/lib/swiper.min.js #swiper js依赖
+  custom_css: https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper@1.0.12/lib/swiperstyle.css # 适配主题样式补丁
+  custom_js: https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper@1.0.12/lib/swiper_init.js # swiper初始化方法
+
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改

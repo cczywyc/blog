@@ -1,6 +1,7 @@
 ---
 title: "MapReduce"
 description: "MIT-6.824实验一详解"
+swiper_index: 3
 date: 2024-08-25
 tags:
   - MIT-6.824

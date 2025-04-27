@@ -1,6 +1,7 @@
 ---
 title: "KV Server"
 description: "MIT-6.824实验二详解"
+swiper_index: 4
 date: 2024-09-17
 tags:
   - MIT-6.824
