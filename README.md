@@ -36,7 +36,7 @@ git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes
 ### clone the articles and configuration files
 ```shell
 rm -rf source _config.yml _config.butterfly.yml package.json
-git clone https://github.com/cczywyc/blog.git
+git clone https://github.com/cczywyc/blog.git .
 mv package.json.txt package.json
 ```
 

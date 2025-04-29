@@ -1,7 +1,7 @@
 ---
 title: "Paxos"
 description: "分布式共识算法-paxos"
-Swiper_index: 5
+swiper_index: 5
 date: 2024-10-02
 tags:
   - MIT-6.824
