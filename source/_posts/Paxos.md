@@ -433,3 +433,4 @@ Basic Paxos 在理论上优先保证安全性，但牺牲了活性的保证，�
 3. Fischer, M. J., Lynch, N. A., & Paterson, M. S. (1985). Impossibility of distributed consensus with one faulty process. Journal of the ACM (JACM), 32(2), 374-382.
 4. Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm. 2014 USENIX Annual Technical Conference (USENIX ATC 14), 305-319.  (Raft 论文，作为 Paxos 的重要对比和后续发展)
 5. Schneider, F. B. (1990). Implementing fault-tolerant services using the state machine approach: A tutorial. ACM Computing Surveys (CSUR), 22(4), 299-319.  (关于状态机复制的重要背景文献)
+6. https://time.geekbang.org/column/article/201700, https://time.geekbang.org/column/article/202772 (极客时间 - 分布式协议与算法实战)
