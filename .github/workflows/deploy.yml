@@ -23,11 +23,17 @@ jobs:
       - name: Generate static files
         run: hexo g
 
+      - name: Add Server Host Key to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v5.0.0 # 使用社区的 SSH Deploy Action
         with:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
-          ARGS: "-rlgoDzvc -e ssh --delete"
+          ARGS: "-rlgoDzvc --delete"
           SOURCE: "public/" # 要传输的源目录 (Hexo 生成的 public 目录)
           REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
           REMOTE_USER: ${{ secrets.DEPLOY_USER }}
