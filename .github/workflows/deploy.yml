@@ -22,7 +22,7 @@ jobs:
         run: npm install -g hexo-cli && npm install
 
       - name: Generate static files
-        run: hexo g
+        run: npm run clean && npm run deploy
 
       - name: Add Server Host Key to known_hosts
         run: |
