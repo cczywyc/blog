@@ -22,13 +22,7 @@ jobs:
         run: npm install -g hexo-cli && npm install
 
       - name: Generate static files
-        run: npm run deploy
-
-      - name: Add Server Host Key to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
+        run: hexo g
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v5.0.0 # 使用社区的 SSH Deploy Action
