@@ -1,0 +1,35 @@
+name: Deploy Hexo Blog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install -g hexo-cli && npm install
+
+      - name: Generate static files
+        run: hexo g
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v5.0.0 # 使用社区的 SSH Deploy Action
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          ARGS: "-rlgoDzvc -e ssh --delete"
+          SOURCE: "public/" # 要传输的源目录 (Hexo 生成的 public 目录)
+          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+          TARGET: ${{ secrets.DEPLOY_TARGET_PATH }}
