@@ -50,7 +50,7 @@ social:
  fab fa-github-alt: https://github.com/cczywyc || Github || '#0e3d6c'
  fab fa-x-twitter: https://twitter.com/cczywyc || Twitter || '#0e3d6c'
  fab fa-telegram: https://t.me/cczywyc || Telegram || '#0e3d6c'
- fab fa-zhihu: https://www.zhihu.com/people/cczywyc || 知乎 || '#0e3d6c'
+ #fab fa-zhihu: https://www.zhihu.com/people/cczywyc || 知乎 || '#0e3d6c'
  far fa-envelope: mailto:cczywyc@gmail.com || Email || '#0e3d6c'
  fas fa-rss: /atom.xml || RSS || '#0e3d6c'
 
