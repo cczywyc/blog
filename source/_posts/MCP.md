@@ -1,6 +1,7 @@
 ---
 title: "聊聊MCP"
 description: "关于MCP入门和使用的文章"
+swiper_index: 6
 date: 2025-04-26
 tags:
   - AI
