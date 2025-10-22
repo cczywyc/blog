@@ -253,7 +253,7 @@ aside:
       link: https://github.com/cczywyc
   card_announcement:
     enable: true
-    content: 这是我的个人网站<br />欢迎你来，希望我们能成为朋友
+    content: 欢迎你来，希望我们能成为朋友<br />正在学习 AI 中
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
