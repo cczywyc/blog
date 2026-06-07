@@ -839,7 +839,7 @@ abcjs:
 # mermaid
 # see https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: true
+  enable: false
   # built-in themes: default/forest/dark/neutral
   theme:
     light: default
